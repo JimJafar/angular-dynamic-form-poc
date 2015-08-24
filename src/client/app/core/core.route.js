@@ -14,6 +14,14 @@
     function getStates() {
         return [
             {
+                state: 'main',
+                config: {
+                    url: '/',
+                    templateUrl: 'index.html',
+                    title: '404'
+                }
+            },
+            {
                 state: '404',
                 config: {
                     url: '/404',
