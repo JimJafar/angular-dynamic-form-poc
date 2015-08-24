@@ -27,18 +27,10 @@
     <!-- endbuild -->
 </head>
 <body>
-    <div>
-        <div ng-include="'app/layout/shell.html'"></div>
-        <div id="splash-page" ng-show="showSplash">
-            <div class="page-splash">
-                <div class="page-splash-message">
-                    angular-dynamic-form-poc
-                </div>
-                <div class="progress progress-striped active page-progress-bar">
-                    <div class="bar"></div>
-                </div>
-            </div>
-        </div>
+    <div ng-controller="AppController as appCtrl">
+        <select ng-model="appCtrl.datafile" ng-options="datafile as datafile.name for datafile in appCtrl.datafiles track by datafile.filename">
+        </select>
+        <dynamic-form form-data="appCtrl.data"></dynamic-form>
     </div>
 
     <!-- build:js js/lib.js -->
@@ -63,6 +55,7 @@
     <script src="/src/client/app/blocks/router/router.module.js"></script>
     <script src="/src/client/app/core/core.module.js"></script>
     <script src="/src/client/app/widgets/widgets.module.js"></script>
+    <script src="/src/client/app/app-controller.js"></script>
     <script src="/src/client/app/blocks/exception/exception-handler.provider.js"></script>
     <script src="/src/client/app/blocks/exception/exception.js"></script>
     <script src="/src/client/app/blocks/logger/logger.js"></script>
@@ -71,6 +64,15 @@
     <script src="/src/client/app/core/constants.js"></script>
     <script src="/src/client/app/core/core.route.js"></script>
     <script src="/src/client/app/core/dataservice.js"></script>
+    <script src="/src/client/app/widgets/contract-select-block.controller.js"></script>
+    <script src="/src/client/app/widgets/contract-select-block.directive.js"></script>
+    <script src="/src/client/app/widgets/dynamic-form.controller.js"></script>
+    <script src="/src/client/app/widgets/dynamic-form.directive.js"></script>
+    <script src="/src/client/app/widgets/form-block.directive.js"></script>
+    <script src="/src/client/app/widgets/paragraph-block.controller.js"></script>
+    <script src="/src/client/app/widgets/paragraph-block.directive.js"></script>
+    <script src="/src/client/app/widgets/text-input-block.controller.js"></script>
+    <script src="/src/client/app/widgets/text-input-block.directive.js"></script>
     <script src="/src/client/app/widgets/title-block.controller.js"></script>
     <script src="/src/client/app/widgets/title-block.directive.js"></script>
     <!-- endinject -->
