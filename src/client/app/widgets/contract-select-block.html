@@ -1,0 +1,11 @@
+<ng-form name="contractSelectForm">
+  <h1>{{definition().data.title}}</h1>
+  <div ng-repeat="contract in definition().data.contracts" ng-class="{preferred: contract.preferred}">
+    <input type="radio" name="contract" id="contract{{contract.id}}"
+           value="{{contract.id}}" ng-model="response[definition().id]" required />
+    <label for="contract{{contract.id}}">{{contract.name}}</label>
+  </div>
+  <ng-messages for="contractSelectForm.contract.$error">
+    <ng-message when="required" class="bred">Please select a contract</ng-message>
+  </ng-messages>
+</ng-form>

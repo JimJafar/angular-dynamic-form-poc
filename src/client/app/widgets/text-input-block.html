@@ -1,0 +1,8 @@
+<ng-form name="textInputForm">
+  <h1>{{definition().data.title}}</h1>
+  <input type="text" name="textinput" ng-model="response[definition().id].textinput" required ng-minlength="5" />
+  <div ng-messages="textInputForm.textinput.$error" role="alert">
+    <span ng-message="required" class="bred">This field is required</span>
+    <span ng-message="minlength" class="bred">This field must be at least 5 chars</span>
+  </div>
+</ng-form>
