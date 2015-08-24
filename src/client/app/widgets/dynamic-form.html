@@ -1,0 +1,15 @@
+<form name="SwitchForm" novalidate>
+    <form-block ng-repeat="block in formData().blocks" data-definition="block" data-response="dynamicFormCtrl.response"></form-block>
+    <p ng-if="SwitchForm.$invalid" class="bred">
+        The form contains errors and cannot be submitted.
+    </p>
+    <p>
+        <button ng-disabled="!SwitchForm.$valid" ng-click="">Submit</button>
+    </p>
+</form>
+<div id="output" class="panel panel-default affix affix-top">
+    <div class="panel-heading">Response object</div>
+    <div class="panel-body">
+        <pre>{{dynamicFormCtrl.response | json}}</pre>
+    </div>
+</div>
