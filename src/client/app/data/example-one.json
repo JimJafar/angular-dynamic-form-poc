@@ -1,0 +1,45 @@
+{
+    "id": "FRM01",
+    "blocks": [
+        {
+            "type": "TitleBlock",
+            "id": "AB123456",
+            "data": {
+                "title": "Form One Title Block!",
+                "content": "<h3>Some HTML content</h3><p>that should:</p><ul><li>render properly</li><li>and be styled</li></ul>"
+            }
+        },
+        {
+            "type": "ParagraphBlock",
+            "id": "CD78965",
+            "data": {
+                "content": "<h1>This is a paragraph block!</h1><h3>With some more HTML content</h3><p>that should also:</p><ul><li>render properly</li><li>and be styled</li></ul>"
+            }
+        },
+        {
+            "type": "ContractSelectBlock",
+            "id": "CB75433",
+            "data": {
+                "title": "This is a contract select block...",
+                "contracts": [
+                    { "id": "CR424242", "name": "Contract 1" },
+                    { "id": "CR434343", "name": "Contract 2", "preferred": true }
+                ]
+            }
+        },
+        {
+            "type": "TextInputBlock",
+            "id": "TX75433",
+            "data": {
+                "title": "This is a text input block..."
+            }
+        },
+        {
+            "type": "TextInputBlock",
+            "id": "TX75434",
+            "data": {
+                "title": "This is another text input block..."
+            }
+        }
+    ]
+}
